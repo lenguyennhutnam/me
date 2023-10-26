@@ -19,7 +19,11 @@
           <h3 class="headline" v-text="headline" />
         </v-card-title>
         <v-card-text style="flex-grow: 1">
-          <div :is="component" v-model="item" @valid="(v) => (valid = v)" />
+          <textarea
+            :is="component"
+            v-model="item"
+            @valid="(v) => (valid = v)"
+          />
         </v-card-text>
         <v-card-actions style="flex-grow: 0">
           <v-spacer />
